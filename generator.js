@@ -9,7 +9,7 @@ app.set('view engine', 'handlebars')
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-  res.send(`<h1>密碼產生器專案</h1>`)
+  res.render('index')
 })
 
 app.listen(port, () => {
