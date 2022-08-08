@@ -7,8 +7,14 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
 app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => {
+  res.render('index')
+})
+
+app.post('/', (req, res) => {
+  console.log('get from POST request', req.body)
   res.render('index')
 })
 
