@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   console.log('get from POST request', req.body)
   let password = generatePassword(req.body)
-  res.render('index', { password: password })
+  res.render('index', { password: password, response: req.body })
 })
 
 app.listen(port, () => {

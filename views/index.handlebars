@@ -5,42 +5,48 @@
     <div class="mb-4 row g-2">
       <label for="length" class="col-md-5">Password Length</label>
       <div class="col-md-7">
-        <input type="number" class="form-control" id="length" name="length" min="4" max="16">
+        <input type="number" class="form-control" id="length" name="length" min="4" max="16"
+          value="{{response.length}}">
         <div class="form-text">Between 4~16 is available</div>
       </div>
     </div>
     <div class="mb-4 row g-2">
       <label for="lowercase" class="col-md-5">Include Lowercase Characters</label>
       <div class="col-md-7">
-        <input type="checkbox" class="form-check-input" id="lowercase" name="lowercase">
+        <input type="checkbox" class="form-check-input" id="lowercase" name="lowercase" {{#if response.lowercase}}
+          checked {{/if}}>
         <span class="form-text ms-2">(e.g. abcdefg)</span>
       </div>
     </div>
     <div class="mb-4 row g-2">
       <label for="uppercase" class="col-md-5">Include Uppercase Characters</label>
       <div class="col-md-7">
-        <input type="checkbox" class="form-check-input" id="uppercase" name="uppercase">
+        <input type="checkbox" class="form-check-input" id="uppercase" name="uppercase" {{#if response.uppercase}}
+          checked {{/if}}>
         <span class="form-text ms-2">(e.g. ABCDEFG)</span>
       </div>
     </div>
     <div class="mb-4 row g-2">
       <label for="number" class="col-md-5">Include Numbers</label>
       <div class="col-md-7">
-        <input type="checkbox" class="form-check-input" id="number" name="numbers">
+        <input type="checkbox" class="form-check-input" id="number" name="numbers" {{#if response.numbers}} checked
+          {{/if}}>
         <span class="form-text ms-2">(e.g. 123456)</span>
       </div>
     </div>
     <div class="mb-4 row g-2">
       <label for="symbol" class="col-md-5">Include Symbols</label>
       <div class="col-md-7">
-        <input type="checkbox" class="form-check-input" id="symbol" name="symbols">
+        <input type="checkbox" class="form-check-input" id="symbol" name="symbols" {{#if response.symbols}} checked
+          {{/if}}>
         <span class="form-text ms-2">(e.g.@#$%)</span>
       </div>
     </div>
     <div class="mb-4 row g-2">
       <label for="exclude" class="col-md-5">Exclude Characters</label>
       <div class="col-md-7">
-        <input type="text" class="form-control" id="exclude" name="excludeCharacters">
+        <input type="text" class="form-control" id="exclude" name="excludeCharacters"
+          value="{{response.excludeCharacters}}">
         <div class="form-text">These characters will not appear in the password</div>
       </div>
     </div>
@@ -49,7 +55,7 @@
         <button type="submit" class="btn submit-btn">Generate Your Password</button>
       </div>
       {{#if password}}
-      <span class="show-password col-md-7 d-flex align-items-center" role="alert">
+      <span class="show-password col-md-7 d-flex align-items-center justify-content-center" role="alert">
         <span class="mr-2 me-2">Your password is:</span><span style="color: #F2A383">{{password}}</span>
       </span>
       {{/if}}
