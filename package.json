@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon generator.js",
-    "start": "node generator.js"
+    "start": "node generator.js",
+    "password": "node ./public/javascripts/generate_password.js"
   },
   "keywords": [],
   "author": "",
