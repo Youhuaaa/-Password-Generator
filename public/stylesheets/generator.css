@@ -1,0 +1,52 @@
+html,
+body {
+  background: #FCEED0;
+  margin: 0px;
+  color: #324259;
+}
+
+.generator {
+  position: relative;
+  padding: 20px;
+  height: auto;
+  width: 55%;
+  background: #FFFFFF;
+  border: 2px solid #324259;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.navbar {
+  background: #F2A383;
+}
+
+form {
+  width: 90%;
+}
+
+.form-check-input,
+.form-control {
+  border: 2px solid #324259;
+}
+
+.submit-btn {
+  background: #FCEED0;
+  border: 2px solid #324259;
+  color: #324259;
+}
+
+.submit-btn:hover {
+  background: #F6C970;
+  border: 2px solid #324259;
+  color: #FFFFFF;
+}
+
+.decoration {
+  width: 792px;
+  height: 520px;
+  position: fixed;
+  top: 102px;
+  left: 328px;
+  z-index: 1;
+  background: #324259;
+}

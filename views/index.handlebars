@@ -1,1 +1,50 @@
-<h3>密碼產生器：Password</h3>
+<div class="container-fluid generator d-flex flex-column align-items-center mt-5">
+  <h3>密碼產生器</h3>
+  <br>
+  <form method="POST" action="/">
+    <div class="mb-4 row g-2">
+      <label for="length" class="col-md-5">Password Length</label>
+      <div class="col-md-7">
+        <input type="number" class="form-control" id="length">
+        <div class="form-text">Between 4~16 is available</div>
+      </div>
+    </div>
+    <div class="mb-4 row g-2">
+      <label for="lowercase" class="col-md-5">Include Lowercase Characters</label>
+      <div class="col-md-7">
+        <input type="checkbox" class="form-check-input" id="lowercase">
+        <span class="form-text ms-2">(e.g. abcdefg)</span>
+      </div>
+    </div>
+    <div class="mb-4 row g-2">
+      <label for="uppercase" class="col-md-5">Include Uppercase Characters</label>
+      <div class="col-md-7">
+        <input type="checkbox" class="form-check-input" id="uppercase">
+        <span class="form-text ms-2">(e.g. ABCDEFG)</span>
+      </div>
+    </div>
+    <div class="mb-4 row g-2">
+      <label for="number" class="col-md-5">Include Numbers</label>
+      <div class="col-md-7">
+        <input type="checkbox" class="form-check-input" id="number">
+        <span class="form-text ms-2">(e.g. 123456)</span>
+      </div>
+    </div>
+    <div class="mb-4 row g-2">
+      <label for="symbol" class="col-md-5">Include Symbols</label>
+      <div class="col-md-7">
+        <input type="checkbox" class="form-check-input" id="symbol">
+        <span class="form-text ms-2">(e.g.@#$%)</span>
+      </div>
+    </div>
+    <div class="mb-4 row g-2">
+      <label for="length" class="col-md-5">Exclude Characters</label>
+      <div class="col-md-7">
+        <input type="text" class="form-control" id="length">
+        <div class="form-text">These characters will not appear in the password</div>
+      </div>
+    </div>
+    <button type="submit" class="btn submit-btn">Generate Your Password</button>
+  </form>
+</div>
+<div class="decoration"></div>
