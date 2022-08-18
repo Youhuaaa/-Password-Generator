@@ -32,11 +32,15 @@ function generatePassword(options) {
   }
 
   // draw password result from collection
-  for (let i = 0; i < Number(options.length); i++) {
-    let index = Math.floor(Math.random() * collection.length)
-    result += collection[index]
-  }
+  if (collection.length === 0) {
+    result = 'There is no valid characters in your selection'
+  } else {
+    for (let i = 0; i < Number(options.length); i++) {
+      let index = Math.floor(Math.random() * collection.length)
+      result += collection[index]
+    }
 
+  }
   console.log('Your password is: ', result)
   return result
 }
